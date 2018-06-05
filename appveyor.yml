@@ -19,7 +19,7 @@ test_script:
 
 after_test:
   - "mkdir svtplay-dl"
-  - "nuitka --recurse-all --recurse-directory --portable --output svtplay-dl bin/svtplay-dl"
+  - "nuitka --recurse-all --recurse-directory --portable --recurse-directory=C:\\Python35\\lib\\site-packages\\certifi --output svtplay-dl bin/svtplay-dl"
   - "dir svtplay-dl"
   - "svtplay-dl\\svtplay-dl.exe --version"
   - "rmdir /q /s svtplay-dl\\svtplay-dl.build"
